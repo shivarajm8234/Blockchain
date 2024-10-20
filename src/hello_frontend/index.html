@@ -1,17 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
-  <base href="/" />
-  <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f2ef;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #283e4a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 120px;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar, .right-sidebar {
+            width: 25%;
+            padding: 15px;
+        }
+
+        .main-content {
+            width: 50%;
+            padding: 15px;
+        }
+
+        .profile-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Post Section */
+        .post {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post textarea {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .post button {
+            margin-top: 10px;
+            width: 100%;
+            background-color: #0073b1;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .connection {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .connection img {
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
 
+    <!-- Header -->
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for people, jobs, companies...">
+        </div>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Network</a>
+            <a href="#">Jobs</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/120" alt="Profile">
+                <h3>John Doe</h3>
+                <p>Software Engineer at XYZ</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="post">
+                <textarea rows="3" placeholder="Start a post..."></textarea>
+                <button>Post</button>
+            </div>
+
+            <div class="post">
+                <h4>Jane Smith</h4>
+                <p>Excited to start my new role at ABC Corporation! 🎉</p>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <h3>Your Connections</h3>
+            <div class="connection">
+                <img src="https://via.placeholder.com/50" alt="Connection">
+                <p>Alice Brown</p>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
